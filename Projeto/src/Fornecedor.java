@@ -25,7 +25,6 @@ public class Fornecedor extends Pessoa {
   }
 
 
-
    public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         return "Fornecedor{" +

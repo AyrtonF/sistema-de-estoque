@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Produto {
@@ -18,12 +19,27 @@ public class Produto {
     this.dataCadastro = dataCadastro;
   }
 
-  // Métodos específicos para Produtos (Cadastrar, Buscar por Nome, Listar, Deletar)
+  // Métodos específicos para Produtos
 
+// Dentro da classe Produto
+public void exibirEmMatriz() {
+   SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+  System.out.printf("| %-5d | %-10s | %-20s | %-20s | %-20s | %-20s |\n",
+          getId(), getCodigo(), getNome(), getDescricao(),
+          getFornecedor().getNome(), sdf.format(getDataCadastro()));
+}
+
+ @Override
+  public String toString() {
+    return "Produto [id=" + id + ", codigo=" + codigo + ", nome=" + nome + ", descricao=" + descricao + ", fornecedor="
+        + fornecedor + ", dataCadastro=" + dataCadastro + "]";
+  }
+  
   // Getters e Setters
   public int getId() {
     return id;
   }
+
 
   public void setId(int id) {
     this.id = id;

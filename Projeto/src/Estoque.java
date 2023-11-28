@@ -15,7 +15,11 @@ public class Estoque {
   // Métodos específicos para Estoque (Atualizar, Adicionar, Remover, Listar Disponíveis)
 
 
-
+ @Override
+  public String toString() {
+    return "Estoque [produto=" + produto + ", quantidade=" + quantidade + ", armazen=" + armazen + ", prateleira="
+        + prateleira + "]";
+  }
 
 
   // Getters e Setters
